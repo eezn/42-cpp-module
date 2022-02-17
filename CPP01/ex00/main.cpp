@@ -6,13 +6,13 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 12:31:58 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/18 04:42:50 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/18 05:19:52 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int	main() {
+int	main( void ) {
 
 	std::cout << GREEN;
 	{

@@ -6,13 +6,13 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 15:57:53 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/18 04:42:18 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/18 05:20:40 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie() {}
+Zombie::Zombie( void ) {}
 
 Zombie::Zombie( std::string name ) {
 
