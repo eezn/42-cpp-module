@@ -4,3 +4,6 @@
 
 # .gitignore
 /gitignore
+
+# visual studio code
+settings.json
