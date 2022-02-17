@@ -6,37 +6,37 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:50:46 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/17 09:07:16 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/18 05:09:11 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() {}
-PhoneBook::~PhoneBook() {}
+PhoneBook::PhoneBook( void ) {}
+PhoneBook::~PhoneBook( void ) {}
 
-void PhoneBook::WarningMesssage()
-{
+void PhoneBook::warningMesssage( void ) {
+
 	std::cout << RED 
 	<< "(If you type 'CTRL + D', something surprising might happen?)" 
 	<< EOC 
 	<< std::endl;
 }
 
-void PhoneBook::SetDefault()
-{
+void PhoneBook::setDefault( void ) {
+
 	count = 0;
 	bIsMax = false;
 }
 
-void PhoneBook::ClearCin()
-{
+void PhoneBook::clear( void ) {
+
 	std::cin.clear();
 	std::cin.ignore(BUFF_SIZE, '\n');
 }
 
-void PhoneBook::PromptInCommand()
-{
+void PhoneBook::promptInCommand( void ) {
+
 	std::string	command;
 	std::cout << GREEN << "Please input Command [ ADD / SEARCH / EXIT ]: " << EOC;
 	getline(std::cin, command, '\n');
@@ -50,62 +50,58 @@ void PhoneBook::PromptInCommand()
 		command_type = NO_MATCH;
 }
 
-int PhoneBook::GetCommandType() { return (command_type); }
+int PhoneBook::getCommandType( void ) { return (command_type); }
 
-void PhoneBook::AddContact()
-{
-	if (count == PB_SIZE)
-	{
+void PhoneBook::addContact( void ) {
+
+	if (count == PB_SIZE) {
 		bIsMax = true;
 		count = 0;
 	}
-	contacts[count].SetField(FIRST_NAME);
-	contacts[count].SetField(LAST_NAME);
-	contacts[count].SetField(NICKNAME);
-	contacts[count].SetField(PHONE_NUMBER);
-	contacts[count].SetField(DARKEST_SECRET);
+	contacts[count].setField(FIRST_NAME);
+	contacts[count].setField(LAST_NAME);
+	contacts[count].setField(NICKNAME);
+	contacts[count].setField(PHONE_NUMBER);
+	contacts[count].setField(DARKEST_SECRET);
 	count++;
 }
 
-void PhoneBook::SearchContact()
-{
+void PhoneBook::searchContact( void ) {
+
 	int	idx;
 	int	end;
 	
 	if (!bIsMax && !count)
 		std::cout << RED << "PhoneBook is empty." << EOC << std::endl;
-	else
-	{
+	else {
 		std::cout << PURPLE << '|';
-		ApplyFormat("INDEX", false);
-		ApplyFormat("FIRST NAME", false);
-		ApplyFormat("LAST NAME", false);
-		ApplyFormat("NICKNAME", true);
+		applyFormat("INDEX", false);
+		applyFormat("FIRST NAME", false);
+		applyFormat("LAST NAME", false);
+		applyFormat("NICKNAME", true);
 		std::cout << EOC;
 		if (bIsMax)
 			end = PB_SIZE;
 		else
 			end = count;
 		idx = -1;
-		while (++idx < end)
-		{
+		while (++idx < end) {
 			std::cout << PURPLE << "|         " << idx << '|';
-			ApplyFormat(contacts[idx].GetField(FIRST_NAME), false);
-			ApplyFormat(contacts[idx].GetField(LAST_NAME), false);
-			ApplyFormat(contacts[idx].GetField(NICKNAME), true);
+			applyFormat(contacts[idx].getField(FIRST_NAME), false);
+			applyFormat(contacts[idx].getField(LAST_NAME), false);
+			applyFormat(contacts[idx].getField(NICKNAME), true);
 		}
 		std::cout << EOC;
-		ReadContact(end);
+		readContact(end);
 	}
 }
 
-void PhoneBook::ApplyFormat(std::string content, bool bIsLast)
-{
+void PhoneBook::applyFormat( std::string content, bool bIsLast ) {
+
 	int	len;
 
 	len = content.length();
-	if (len < 11)
-	{
+	if (len < 11) {
 		for (int i = 0; i < 10 - len; i++)
 			std::cout << ' ';
 		std::cout << content << '|';
@@ -116,8 +112,8 @@ void PhoneBook::ApplyFormat(std::string content, bool bIsLast)
 		std::cout << std::endl;
 }
 
-void PhoneBook::ReadContact(int end)
-{
+void PhoneBook::readContact( int end ) {
+
 	int	idx;
 
 	std::cout << GREEN <<  "Choose INDEX: " << EOC;
@@ -126,18 +122,17 @@ void PhoneBook::ReadContact(int end)
 		std::cout << RED << "Please put in the numbers." << EOC << std::endl;
 	else if (idx >= end)
 		std::cout << RED << "Index out of range." << EOC << std::endl;
-	else
-	{
-		std::cout << PURPLE << "| Fisrt Name     : " << contacts[idx].GetField(FIRST_NAME)
+	else {
+		std::cout << PURPLE << "| Fisrt Name     : " << contacts[idx].getField(FIRST_NAME)
 		<< EOC << std::endl;
-		std::cout << PURPLE << "| Last Name      : " << contacts[idx].GetField(LAST_NAME)
+		std::cout << PURPLE << "| Last Name      : " << contacts[idx].getField(LAST_NAME)
 		<< EOC << std::endl;
-		std::cout << PURPLE << "| Nickname       : " << contacts[idx].GetField(NICKNAME)
+		std::cout << PURPLE << "| Nickname       : " << contacts[idx].getField(NICKNAME)
 		<< EOC << std::endl;
-		std::cout << PURPLE << "| Phone Number   : " << contacts[idx].GetField(PHONE_NUMBER)
+		std::cout << PURPLE << "| Phone Number   : " << contacts[idx].getField(PHONE_NUMBER)
 		<< EOC << std::endl;
-		std::cout << PURPLE << "| Darkest Secret : " << contacts[idx].GetField(DARKEST_SECRET)
+		std::cout << PURPLE << "| Darkest Secret : " << contacts[idx].getField(DARKEST_SECRET)
 		<< EOC << std::endl;
 	}
-	ClearCin();
+	clear();
 }

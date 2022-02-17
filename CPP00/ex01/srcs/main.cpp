@@ -6,31 +6,31 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 14:37:10 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/17 02:57:00 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/18 05:09:53 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-int main(void)
-{
+int main( void ) {
+
 	PhoneBook	pb;
 	int			type;
 
-	pb.SetDefault();
-	pb.WarningMesssage();
-	while (true)
-	{
-		pb.PromptInCommand();
-		type = pb.GetCommandType();
+	pb.setDefault();
+	pb.warningMesssage();
+	while (true) {
+		pb.promptInCommand();
+		type = pb.getCommandType();
 		if (type == EXIT)
 			break ;
 		else if (type == ADD)
-			pb.AddContact();
+			pb.addContact();
 		else if (type == SEARCH)
-			pb.SearchContact();
+			pb.searchContact();
 		else
 			continue ;
 	}
-	return (EXIT_SUCCESS);
+
+	return (0);
 }
