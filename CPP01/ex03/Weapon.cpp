@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 10:01:42 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/18 12:08:33 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/18 12:39:21 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Weapon::Weapon( std::string weapon_type )
 
 Weapon::~Weapon( void ) {}
 
-std::string Weapon::getType( void ) {
+const std::string &Weapon::getType( void ) {
 	
 	return (this->weapon_type);
 }

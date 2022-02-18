@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 10:00:31 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/18 12:07:33 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/18 12:38:56 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ public:
 	Weapon( std::string weapon_type );
 	~Weapon( void );
 
-	std::string	getType( void );
-	void		setType( std::string weapon_type );
+	const std::string	&getType( void );
+	void				setType( std::string weapon_type );
 
 };
 
