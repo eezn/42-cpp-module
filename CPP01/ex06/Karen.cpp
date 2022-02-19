@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 17:42:53 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/19 19:12:57 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/19 19:20:17 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Karen::Karen( void ) {}
 Karen::~Karen( void ) {}
 
 void Karen::debug( void ) {
-	std::cout << RED
+	std::cout << BLUE
 	<< "I love to get extra bacon "
 	<< "for my 7XL-double-cheese-triple-pickle-special-ketchup burger. "
 	<< "I just love it!" 
@@ -41,7 +41,7 @@ void Karen::warning( void ) {
 }
 
 void Karen::error( void ) {
-	std::cout << BLUE
+	std::cout << RED
 	<< "This is unacceptable, "
 	<< "I want to speak to the manager now."
 	<< EOC << std::endl;
