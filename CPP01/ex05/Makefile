@@ -6,7 +6,7 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 17:42:08 by jin-lee           #+#    #+#              #
-#    Updated: 2022/02/19 17:45:03 by jin-lee          ###   ########.fr        #
+#    Updated: 2022/02/19 19:38:17 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,6 @@ $(OBJS_DIR):
 
 clean:
 	@$(RM) -r $(OBJS_DIR)
-	@$(RM) *.replace
 
 fclean: clean
 	@$(RM) $(NAME)
