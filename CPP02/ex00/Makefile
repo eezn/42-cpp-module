@@ -6,11 +6,11 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/21 12:34:14 by jin-lee           #+#    #+#              #
-#    Updated: 2022/02/21 12:34:28 by jin-lee          ###   ########.fr        #
+#    Updated: 2022/02/21 14:58:17 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Fixed
+NAME		= Fixed_00
 
 CXX			= clang++
 CXXFLAGS	= -Wall -Werror -Wextra
