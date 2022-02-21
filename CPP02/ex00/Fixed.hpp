@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:06:59 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/21 12:43:09 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/21 12:49:43 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ class Fixed {
 
 private:
 
-	int	value;
+	int					value;
+	static const int	fractionalBits = 8;
 
 
 public:
