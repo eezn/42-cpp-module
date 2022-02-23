@@ -6,14 +6,14 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 12:28:18 by jin-lee           #+#    #+#              #
-#    Updated: 2022/02/17 16:47:05 by jin-lee          ###   ########.fr        #
+#    Updated: 2022/02/23 14:48:15 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= Zombie
 
-CXX			= clang++
-CXXFLAGS	= -Wall -Werror -Wextra
+CXX			= c++
+CXXFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 RED			= "\033[31m"
 GREEN		= "\033[32m"

@@ -6,14 +6,14 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/18 06:36:18 by jin-lee           #+#    #+#              #
-#    Updated: 2022/02/18 06:36:57 by jin-lee          ###   ########.fr        #
+#    Updated: 2022/02/23 14:53:23 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= Brain
 
-CXX			= clang++
-CXXFLAGS	= -Wall -Werror -Wextra
+CXX			= c++
+CXXFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 RED			= "\033[31m"
 GREEN		= "\033[32m"
