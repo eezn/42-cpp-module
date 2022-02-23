@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:44:52 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 19:04:39 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 20:29:42 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,17 +55,17 @@ unsigned int ClapTrap::getAttackDamage( void ) const { return (this->attack_dama
 void ClapTrap::printStatus( void ) const {
 
 	std::cout << PURPLE;
-	std::cout << ">>> " << getName() << "'s Status" << std::endl;
-	std::cout << "| HitPoints: " << getHitPoints() << std::endl;
-	std::cout << "| EnergyPoints: " << getEnergyPoints() << std::endl;
-	std::cout << "| AttackDamage: " << getAttackDamage() << std::endl;
-	std::cout << EOC;
+	std::cout << getName() << "'s Status" << std::endl;
+	std::cout << "- HitPoints\t: " << getHitPoints() << std::endl;
+	std::cout << "- EnergyPoints\t: " << getEnergyPoints() << std::endl;
+	std::cout << "- AttackDamage\t: " << getAttackDamage() << std::endl;
+	std::cout << EOC << std::endl;
 }
 
 void ClapTrap::attack( std::string const &target ) {
 
 	std::cout << YELLOW
-	<< "ClapTrap " << this->name
+	<< this->name
 	<< " attack " << target
 	<< ", causing " << this->attack_damage
 	<< " points of damage!"
@@ -82,7 +82,7 @@ void ClapTrap::takeDamage( unsigned int amount ) {
 		this->energy_points = (unsigned int)temp;
 
 	std::cout << RED
-	<< "ClapTrap " << this->name
+	<< this->name
 	<< " takes " << amount << " points of damage!"
 	<< EOC << std::endl;
 	printStatus();
@@ -91,7 +91,7 @@ void ClapTrap::takeDamage( unsigned int amount ) {
 void ClapTrap::beRepaired( unsigned int amount ) {
 
 	std::cout << GREEN
-	<< "ClapTrap " << this->name
+	<< this->name
 	<< " repaied " << amount << " points of energy."
 	<< EOC << std::endl;
 	this->energy_points += amount;

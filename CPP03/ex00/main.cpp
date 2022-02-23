@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:45:05 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 18:58:34 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 20:34:23 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 int main( void ) {
 
 	ClapTrap const a("jin-lee");
-	ClapTrap b = a;
-	ClapTrap c(a);
+	ClapTrap b;
 
+	b = a;
 	b.attack("someone");
-	b.beRepaired(10);
 	b.takeDamage(100);
 
+	ClapTrap c(b);
 	c.beRepaired(100);
 	c.takeDamage(10);
+	c.guardGate();
+}
 }

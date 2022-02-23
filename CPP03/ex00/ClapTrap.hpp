@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:44:14 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 18:12:26 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 19:06:15 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ public:
 	void			takeDamage( unsigned int amount );
 	void			beRepaired( unsigned int amount );
 
-	ClapTrap		&operator=( const ClapTrap &fRef );
+	ClapTrap		&operator=( const ClapTrap &cRef );
 
 };
 
