@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 19:49:54 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 20:40:21 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 22:17:57 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ ScavTrap::~ScavTrap( void ) {
 
 /* ************************************************************************** */
 // Public Member Functions
+
+void ScavTrap::attack( std::string const &target ) {
+	
+	std::cout << BLUE << "ScavTrap: ";
+	ClapTrap::attack(target);
+}
 
 void ScavTrap::guardGate( void ) {
 

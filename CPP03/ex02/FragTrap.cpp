@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 21:33:51 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 21:39:32 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 22:17:51 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ FragTrap::~FragTrap( void ) {
 
 /* ************************************************************************** */
 // Public Member Functions
+
+void FragTrap::attack( std::string const &target ) {
+	
+	std::cout << BLUE << "FragTrap: ";
+	ClapTrap::attack(target);
+}
 
 void FragTrap::highFivesGuys( void ) {
 

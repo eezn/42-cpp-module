@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 19:49:52 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 20:37:08 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 22:13:18 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
 	ScavTrap( const ScavTrap &sRef );
 	~ScavTrap( void );
 
+	void		attack( std::string const &target );
 	void		guardGate( void );
 
 	ScavTrap	&operator=( const ScavTrap &sRef );
