@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:45:05 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 20:34:23 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 21:00:01 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,4 @@ int main( void ) {
 	ClapTrap c(b);
 	c.beRepaired(100);
 	c.takeDamage(10);
-	c.guardGate();
-}
 }
