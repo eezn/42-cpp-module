@@ -6,14 +6,14 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/21 12:34:14 by jin-lee           #+#    #+#              #
-#    Updated: 2022/02/21 14:58:17 by jin-lee          ###   ########.fr        #
+#    Updated: 2022/02/23 14:57:03 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= Fixed_00
 
-CXX			= clang++
-CXXFLAGS	= -Wall -Werror -Wextra
+CXX			= c++
+CXXFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 RED			= "\033[31m"
 GREEN		= "\033[32m"
