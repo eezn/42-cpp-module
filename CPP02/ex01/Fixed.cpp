@@ -6,11 +6,14 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:06:57 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/21 22:45:06 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 16:26:32 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+/* ************************************************************************** */
+// Constructor and Destructor
 
 Fixed::Fixed( void ) {
 
@@ -41,15 +44,16 @@ Fixed::~Fixed( void ) {
 	std::cout << "Destructor called" << std::endl;
 }
 
+/* ************************************************************************** */
+// Public Member Functions
+
 int Fixed::getRawBits( void ) const {
 
-	// std::cout << "getRawBits called" << std::endl;
 	return (this->value);
 }
 
 void Fixed::setRawBits( int const raw ) {
 
-	// std::cout << "setRawBits called" << std::endl;
 	this->value = raw;
 }
 
@@ -63,12 +67,17 @@ float Fixed::toFloat( void ) const {
 	return ((float)this->value / (1 << this->fractionalBits));
 }
 
+/* ************************************************************************** */
+// Assignment operator
+
 Fixed	&Fixed::operator=( const Fixed &fRef ) {
 	
 	std::cout << "Assignation operator called" << std::endl;
 	this->value = fRef.getRawBits();
 	return (*this);
 }
+
+/* ************************************************************************** */
 
 std::ostream &operator<<( std::ostream &out, const Fixed &fRef ) {
 
