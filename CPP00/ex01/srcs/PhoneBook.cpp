@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:50:46 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/18 05:09:11 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 14:44:25 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ PhoneBook::~PhoneBook( void ) {}
 
 void PhoneBook::warningMesssage( void ) {
 
-	std::cout << RED 
-	<< "(If you type 'CTRL + D', something surprising might happen?)" 
-	<< EOC 
-	<< std::endl;
+	std::cout << RED
+	<< "(If you type 'CTRL + D', something surprising might happen?)"
+	<< EOC << std::endl;
 }
 
 void PhoneBook::setDefault( void ) {

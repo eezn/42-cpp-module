@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 06:00:27 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/18 05:11:40 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 14:29:25 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <cctype>
 
 int	main( int argc, char **argv ) {
+
 	char	*str;
 	int		idx;
 
