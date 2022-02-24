@@ -6,14 +6,14 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/15 06:04:07 by jin-lee           #+#    #+#              #
-#    Updated: 2022/02/16 06:23:41 by jin-lee          ###   ########.fr        #
+#    Updated: 2022/02/23 14:29:50 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= PhoneBook
 
-CXX			= clang++
-CXXFLAGS	= -Wall -Werror -Wextra
+CXX			= c++
+CXXFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 RED			= "\033[31m"
 GREEN		= "\033[32m"

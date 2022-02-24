@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:06:57 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/22 11:29:17 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/23 15:01:48 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ Fixed::Fixed( const Fixed &fRef ) {
 
 Fixed::Fixed( const int value ) {
 
-	std::cout << value << std::endl;
 	this->value = value << this->fractionalBits;
-	std::cout << this->value << std::endl;
 }
 
 Fixed::Fixed( const float value ) {

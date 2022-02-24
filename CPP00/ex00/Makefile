@@ -6,14 +6,14 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/15 06:03:26 by jin-lee           #+#    #+#              #
-#    Updated: 2022/02/18 04:50:22 by jin-lee          ###   ########.fr        #
+#    Updated: 2022/02/23 14:20:08 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= megaphone
 
-CXX			= clang++
-CXXFLAGS	= -Wall -Werror -Wextra
+CXX			= c++
+CXXFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 RED			= "\033[31m"
 GREEN		= "\033[32m"
