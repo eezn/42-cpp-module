@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:58:20 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/24 20:02:46 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/24 20:13:43 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,15 @@ int main( void ) {
 	for (int i = 0; i < 10; i++) {
 		if (i % 2 == 0) {
 			Dog temp_dog(*(Dog *)animal[i]); // 다운 캐스팅, 복사 생성
-			std::cout << YELLOW << "Dog[" << i << "] think... "
+			std::cout << GREEN
+			<< temp_dog.getType() << "[" << i << "] think... "
 			<< RED << temp_dog.getBrain()->getIdeas(i)
 			<< EOC << std::endl;
 		}
 		else {
 			Cat temp_cat(*(Cat *)animal[i]); // 다운 캐스팅, 복사 생성
-			std::cout << YELLOW << "Cat[" << i << "] think... "
+			std::cout << CYAN
+			<< temp_cat.getType() << "[" << i << "] think... "
 			<< RED << temp_cat.getBrain()->getIdeas(i)
 			<< EOC << std::endl;
 		}

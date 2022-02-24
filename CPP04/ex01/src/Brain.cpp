@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 17:23:42 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/24 19:43:51 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/24 20:10:24 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ Brain &Brain::operator=( const Brain &bRef ) {
 
 Brain::Brain( void ) {
 
-	std::cout << CYAN << "Brain::" << EOC;
-	std::cout << "Constructor called" << std::endl;
 	for (int i = 0; i < CAPACITY; i++) {
 		this->ideas[i] = "i have no idea..";
 	}
@@ -41,18 +39,9 @@ Brain::Brain( void ) {
 	this->ideas[5] = "Hungry";
 }
 
-Brain::Brain( const Brain &bRef ) {
+Brain::Brain( const Brain &bRef ) { *this = bRef; }
 
-	std::cout << CYAN << "Brain::" << EOC;
-	std::cout << "Copy constructor called" << std::endl;
-	*this = bRef;
-}
-
-Brain::~Brain( void ) {
-
-	std::cout << CYAN << "Brain::" << EOC;
-	std::cout << "Destructor called" << std::endl;
-}
+Brain::~Brain( void ) {}
 
 /* ************************************************************************** */
 // Public Member Functions
