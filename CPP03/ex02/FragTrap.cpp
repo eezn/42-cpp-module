@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 21:33:51 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 22:17:51 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/24 11:02:02 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 FragTrap::FragTrap( void ) : ClapTrap () {
 
-	std::cout << "FragTrap: Default constructor called" << std::endl;
+	std::cout << CYAN << "FragTrap: " << EOC;
+	std::cout << "Default constructor called" << std::endl;
 	this->hit_points = 100;
 	this->energy_points = 100;
 	this->attack_damage = 30;
@@ -25,7 +26,8 @@ FragTrap::FragTrap( void ) : ClapTrap () {
 
 FragTrap::FragTrap( std::string name ) : ClapTrap(name) {
 
-	std::cout << "FragTrap: Constructor called" << std::endl;
+	std::cout << CYAN << "FragTrap: " << EOC;
+	std::cout << "Constructor called" << std::endl;
 	this->hit_points = 100;
 	this->energy_points = 100;
 	this->attack_damage = 30;
@@ -33,12 +35,14 @@ FragTrap::FragTrap( std::string name ) : ClapTrap(name) {
 
 FragTrap::FragTrap( const FragTrap &fRef ) : ClapTrap(fRef) {
 
-	std::cout << "FragTrap: Copy constructor called" << std::endl;
+	std::cout << CYAN << "FragTrap: " << EOC;
+	std::cout << "Copy constructor called" << std::endl;
 }
 
 FragTrap::~FragTrap( void ) {
 
-	std::cout << "FragTrap: Destructor called" << std::endl;
+	std::cout << CYAN << "FragTrap: " << EOC;
+	std::cout << "Destructor called" << std::endl;
 }
 
 /* ************************************************************************** */
@@ -46,7 +50,7 @@ FragTrap::~FragTrap( void ) {
 
 void FragTrap::attack( std::string const &target ) {
 	
-	std::cout << BLUE << "FragTrap: ";
+	std::cout << CYAN << "FragTrap: ";
 	ClapTrap::attack(target);
 }
 
