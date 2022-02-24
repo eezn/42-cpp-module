@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 19:49:54 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 22:21:04 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/24 11:04:34 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 ScavTrap::ScavTrap( void ) : ClapTrap() {
 
-	std::cout << "ScavTrap: Default constructor called" << std::endl;
+	std::cout << CYAN << "ScavTrap: " << EOC;
+	std::cout << "Default constructor called" << std::endl;
 	this->hit_points = 100;
 	this->energy_points = 50;
 	this->attack_damage = 20;
@@ -25,7 +26,8 @@ ScavTrap::ScavTrap( void ) : ClapTrap() {
 
 ScavTrap::ScavTrap( std::string name ) : ClapTrap(name) {
 
-	std::cout << "ScavTrap: Constructor called" << std::endl;
+	std::cout << CYAN << "ScavTrap: " << EOC;
+	std::cout << "Constructor called" << std::endl;
 	this->hit_points = 100;
 	this->energy_points = 50;
 	this->attack_damage = 20;
@@ -33,12 +35,14 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name) {
 
 ScavTrap::ScavTrap( const ScavTrap &sRef ) : ClapTrap(sRef) {
 
-	std::cout << "ScavTrap: Copy constructor called" << std::endl;
+	std::cout << CYAN << "ScavTrap: " << EOC;
+	std::cout << "Copy constructor called" << std::endl;
 }
 
 ScavTrap::~ScavTrap( void ) {
 
-	std::cout << "ScavTrap: Destructor called" << std::endl;
+	std::cout << CYAN << "ScavTrap: " << EOC;
+	std::cout << "Destructor called" << std::endl;
 }
 
 /* ************************************************************************** */
@@ -46,7 +50,7 @@ ScavTrap::~ScavTrap( void ) {
 
 void ScavTrap::attack( std::string const &target ) {
 	
-	std::cout << BLUE << "ScavTrap: ";
+	std::cout << CYAN << "ScavTrap: ";
 	ClapTrap::attack(target);
 }
 
