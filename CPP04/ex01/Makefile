@@ -6,11 +6,11 @@
 #    By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/24 13:57:51 by jin-lee           #+#    #+#              #
-#    Updated: 2022/02/24 15:55:43 by jin-lee          ###   ########.fr        #
+#    Updated: 2022/02/24 19:13:42 by jin-lee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= Animal_00
+NAME		= Animal_01
 
 CXX			= c++
 CXXFLAGS	= -Wall -Werror -Wextra -std=c++98
@@ -20,20 +20,16 @@ GREEN		= "\033[32m"
 YELLOW		= "\033[33m"
 EOC			= "\033[0m"
 
-INCS_DIR	= ./includes
+INCS_DIR	= ./include
+SRCS_DIR	= ./src
 
-SRCS_DIR	= ./override \
-			  ./overload \
-			  ./
+SRCS		= ./src/main.cpp \
+			  ./src/Animal.cpp \
+			  ./src/Dog.cpp \
+			  ./src/Cat.cpp \
+			  ./src/Brain.cpp
 
-SRCS		= ./main.cpp \
-			  ./override/Animal.cpp \
-			  ./override/Dog.cpp \
-			  ./override/Cat.cpp \
-			  ./overload/WrongAnimal.cpp \
-			  ./overload/WrongCat.cpp
-
-OBJS_DIR	= ./objs
+OBJS_DIR	= ./obj
 OBJS		= $(addprefix $(OBJS_DIR)/, $(notdir $(SRCS:.cpp=.o)))
 vpath %.cpp $(SRCS_DIR)
 
