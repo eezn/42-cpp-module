@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 17:15:58 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/24 18:27:33 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/24 20:58:22 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 #define BLACK "\e[0;30m"
 #define RED "\e[0;31m"
@@ -43,7 +44,7 @@ public:
 
 	Brain	&operator=( const Brain &bRef );
 
-	std::string		getIdeas( const int idx ) const;
+	std::string		getIdea( const int idx ) const;
 
 };
 
