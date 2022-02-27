@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 17:54:34 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/27 20:26:15 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/27 21:32:23 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 class Bureaucrat {
 
-protected:
+private:
 
 	const std::string	name;
 	int					grade;

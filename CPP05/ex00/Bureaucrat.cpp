@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 17:55:14 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/27 20:34:59 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/27 21:32:53 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void Bureaucrat::rankdownGrade( const unsigned int &amount ) {
 // I/O operator
 
 std::ostream &operator<<( std::ostream &out, const Bureaucrat &Ref ) {
-	out << Ref.getName() << " (Rank: " << Ref.getGrade() << ")";
+
+	out << Ref.getName() << ", bureaucrat grade " << Ref.getGrade();
 	return (out);
 }
