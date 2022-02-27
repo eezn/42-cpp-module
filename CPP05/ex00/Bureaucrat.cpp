@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 17:55:14 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/27 21:32:53 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/28 00:28:30 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Bureaucrat::~Bureaucrat( void ) {}
 
 Bureaucrat &Bureaucrat::operator=( const Bureaucrat &Ref ) {
 
-	(std::string)(this->name) = Ref.getName();
+	*(const_cast<std::string*>(&(this->name))) = Ref.getName();
 	this->grade = Ref.getGrade();
 	return (*this);
 }
@@ -49,7 +49,7 @@ std::string Bureaucrat::getName( void ) const { return (this->name); }
 
 int Bureaucrat::getGrade( void ) const { return (this->grade); }
 
-void Bureaucrat::rankupGrade( const unsigned int &amount ) {
+void Bureaucrat::increaseGrade( const unsigned int &amount ) {
 
 	if (this->grade - amount < HIGH)
 		throw Bureaucrat::GradeTooHighException();
@@ -58,7 +58,7 @@ void Bureaucrat::rankupGrade( const unsigned int &amount ) {
 	this->grade -= amount;
 }
 
-void Bureaucrat::rankdownGrade( const unsigned int &amount ) {
+void Bureaucrat::decreaseGrade( const unsigned int &amount ) {
 
 	if (this->grade + amount < HIGH)
 		throw Bureaucrat::GradeTooHighException();

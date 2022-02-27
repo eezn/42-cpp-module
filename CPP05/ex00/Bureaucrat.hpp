@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 17:54:34 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/27 21:32:23 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/02/28 00:26:50 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ public:
 	
 	std::string	getName( void ) const;
 	int			getGrade( void ) const;
-	void		rankupGrade( const unsigned int &amount );
-	void		rankdownGrade( const unsigned int &amount );
+	void		increaseGrade( const unsigned int &amount );
+	void		decreaseGrade( const unsigned int &amount );
 
 	// 설명 문자열을 반환 (exception class)
 	// C++11 이전, virtual const char* what() const throw();
