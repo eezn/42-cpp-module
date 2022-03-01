@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 17:54:11 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/28 00:45:19 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/01 21:36:00 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main ( void ) {
 		bureaucrat.increaseGrade(10);		// 0 (throw)
 		std::cout << bureaucrat << std::endl;
 	}
-	catch (const std::exception &e) {
+	catch (std::exception &e) {
 		std::cerr << e.what() << std::endl;
 	}
 
@@ -32,7 +32,7 @@ int main ( void ) {
 		bureaucrat.decreaseGrade(1);	// 151 (throw)
 		std::cout << bureaucrat << std::endl;
 	}
-	catch (const std::exception &e) {
+	catch (std::exception &e) {
 		std::cerr << e.what() << std::endl;
 	}
 
@@ -40,7 +40,7 @@ int main ( void ) {
 		bureaucrat.decreaseGrade(-150);	// 0 (throw)
 		std::cout << bureaucrat << std::endl;
 	}
-	catch (const std::exception &e) {
+	catch (std::exception &e) {
 		std::cerr << e.what() << std::endl;
 	}
 
@@ -48,7 +48,7 @@ int main ( void ) {
 		bureaucrat.increaseGrade(-1);		// 151 (throw)
 		std::cout << bureaucrat << std::endl;
 	}
-	catch (const std::exception &e) {
+	catch (std::exception &e) {
 		std::cerr << e.what() << std::endl;
 	}
 
