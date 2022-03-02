@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 17:42:53 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/19 19:32:28 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/03 02:42:23 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,14 +64,10 @@ void Karen::complain( std::string level ) {
 	for (int i = 0; i < 4; i++) {
 		if (level == levelArr[i]) {
 			switch (i) {
-				case 0:
-					this->debug();
-				case 1:
-					this->info();
-				case 2:
-					this->warning();
-				case 3:
-					this->error();
+				case 0: this->debug();
+				case 1: this->info();
+				case 2: this->warning();
+				case 3: this->error();
 				return ;
 			}
 		}
