@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:06:57 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 15:01:48 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/04 01:20:15 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,13 @@
 /* ************************************************************************** */
 // Constructor and Destructor
 
-Fixed::Fixed( void ) {
+Fixed::Fixed( void ) { this->value = 0; }
 
-	this->value = 0;
-}
+Fixed::Fixed( const Fixed &fRef ) { *this = fRef; }
 
-Fixed::Fixed( const Fixed &fRef ) {
-
-	*this = fRef;
-}
-
-Fixed::Fixed( const int value ) {
-
-	this->value = value << this->fractionalBits;
-}
+Fixed::Fixed( const int value ) { this->value = value << this->fractionalBits; }
 
 Fixed::Fixed( const float value ) {
-
 	this->value = (int)std::roundf(value * (1 << this->fractionalBits));
 }
 
@@ -40,25 +30,20 @@ Fixed::~Fixed( void ) {}
 /* ************************************************************************** */
 // Public Member Functions
 
-int Fixed::getRawBits( void ) const {
+int Fixed::getRawBits( void ) const { return (this->value); }
 
-	return (this->value);
-}
-
-void Fixed::setRawBits( int const raw ) {
-
-	this->value = raw;
-}
+void Fixed::setRawBits( int const raw ) { this->value = raw; }
 
 int Fixed::toInt( void ) const {
-
 	return (this->value >> this->fractionalBits);
 }
 
 float Fixed::toFloat( void ) const {
-
 	return ((float)this->value / (1 << this->fractionalBits));
 }
+
+/* ************************************************************************** */
+// Class Functions (Static)
 
 Fixed &Fixed::min( Fixed &a, Fixed &b ) {
 
@@ -165,7 +150,7 @@ Fixed Fixed::operator*( const Fixed &b ) {
 
 	Fixed ret;
 	
-	ret.setRawBits((this->value * b.value) / (1 << this->fractionalBits));
+	ret.setRawBits((this->value * b.value) >> this->fractionalBits);
 	return (ret);
 }
 
@@ -173,7 +158,7 @@ Fixed Fixed::operator/( const Fixed &b ) {
 
 	Fixed ret;
 
-	ret.setRawBits((this->value / b.value) * (1 << this->fractionalBits));
+	ret.setRawBits((this->value / b.value) << this->fractionalBits);
 	return (ret);
 }
 

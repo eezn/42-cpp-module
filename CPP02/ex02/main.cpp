@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:07:13 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/22 11:31:20 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/04 01:10:25 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ int main( void ) {
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
+
+	// Fixed c;
+	// Fixed::max( a, c );
+	// Fixed::max( a, b );
 
 	return (0);
 }

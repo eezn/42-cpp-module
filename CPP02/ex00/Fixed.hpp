@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:06:59 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/21 12:49:43 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/03 21:05:16 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 class Fixed {
 
 private:
-
-	int					value;
+	// 클래스 변수는 클래스 선언에서 초기화
 	static const int	fractionalBits = 8;
+	int					value;
 
 
 public:

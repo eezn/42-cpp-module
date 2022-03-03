@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:06:57 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/23 16:26:32 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/03 23:57:05 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,26 @@
 
 Fixed::Fixed( void ) {
 
-	std::cout << "Default constructor called" << std::endl;
 	this->value = 0;
+	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed( const Fixed &fRef ) {
 
-	std::cout << "Copy constructor called" << std::endl;
 	*this = fRef;
+	std::cout << "Copy constructor called" << std::endl;
 }
 
 Fixed::Fixed( const int value ) {
 
-	std::cout << "Int constructor called" << std::endl;
 	this->value = value << this->fractionalBits;
+	std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed( const float value ) {
-
+	// float, double 은 shift 연산 불가능
+	this->value = (int)std::roundf(value * (1 << this->fractionalBits));
 	std::cout << "Float constructor called" << std::endl;
-	this->value = (int)std::roundf(value * (1 << this->fractionalBits)); // float, double 은 shift 연산 불가능
 }
 
 Fixed::~Fixed( void ) {
@@ -63,7 +63,7 @@ int Fixed::toInt( void ) const {
 }
 
 float Fixed::toFloat( void ) const {
-
+	// float, double 은 shift 연산 불가능
 	return ((float)this->value / (1 << this->fractionalBits));
 }
 
