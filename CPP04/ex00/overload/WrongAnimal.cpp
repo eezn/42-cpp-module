@@ -19,7 +19,7 @@ WrongAnimal::WrongAnimal( void ) {
 
 	std::cout << PURPLE << "WrongAnimal::" << EOC;
 	std::cout << "Constructor called" << std::endl;
-	this->type = "_";
+	this->type = "WrongAnimal";
 }
 
 WrongAnimal::WrongAnimal( const WrongAnimal &waRef ) {
@@ -54,6 +54,6 @@ std::string WrongAnimal::getType( void ) const { return (this->type); }
 void WrongAnimal::makeSound( void ) const {
 
 	std::cout << RED
-	<< "Wrong Animal!!"
+	<< "Animal!! mal!! mal!!"
 	<< EOC << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 10:35:24 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/25 21:49:44 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/05 12:27:34 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ public:
 
 	Ice &operator=( const Ice &Ref );
 	
-	AMateria	*clone( void ) const; // 오버라이딩
-	void		use( ICharacter &target ); // 오버라이딩
+	AMateria	*clone( void ) const;
+	void		use( ICharacter &target );
 
 };
 

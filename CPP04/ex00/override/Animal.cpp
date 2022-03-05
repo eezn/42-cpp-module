@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:59:05 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/24 14:37:46 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/05 00:52:16 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Animal::Animal( void ) {
 
 	std::cout << CYAN << "Animal::" << EOC;
 	std::cout << "Constructor called" << std::endl;
-	this->type = "_";
+	this->type = "Animal";
 }
 
 Animal::Animal( const Animal &aRef ) {
@@ -50,4 +50,10 @@ Animal &Animal::operator=( const Animal &aRef ) {
 // Public Member Functions
 
 std::string Animal::getType( void ) const { return (this->type); }
-void Animal::makeSound( void ) const {}
+
+void Animal::makeSound( void ) const {
+
+	std::cout << RED
+	<< "Animal!! mal!! mal!!"
+	<< EOC << std::endl;
+}

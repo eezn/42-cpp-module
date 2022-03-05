@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 10:35:39 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/25 21:50:37 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/05 13:13:10 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,7 @@ Ice &Ice::operator=( const Ice &Ref ) {
 // Public Member Functions
 
 // 업캐스팅된 Ice class 포인터를 반환
-AMateria *Ice::clone( void ) const {
-	return (new Ice(*this));
-}
+AMateria *Ice::clone( void ) const { return (new Ice(*this)); }
 
 void Ice::use( ICharacter &target ) {
 

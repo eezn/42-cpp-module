@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 10:35:41 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/25 23:17:26 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/05 14:28:06 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ int main ( void ) {
 	delete bob;
 	delete me;
 	delete src;
-
-	system("leaks Materia");
 	
 	return (0);
 }

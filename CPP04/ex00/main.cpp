@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:58:20 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/24 15:26:23 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/05 01:04:17 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,21 @@
 int main( void ) {
 
 	{
-		const Animal *animal = new Animal();
-		const Animal *cat = new Cat();
-		const Animal *dog = new Dog();
+		const Animal *meta = new Animal();
+		const Animal *c = new Cat();
+		const Animal *d = new Dog();
 
-		std::cout << cat->getType() << std::endl;
-		std::cout << dog->getType() << std::endl;
+		std::cout << c->getType() << std::endl;
+		std::cout << d->getType() << std::endl;
 
-		cat->makeSound();
-		dog->makeSound();
-		animal->makeSound();
+		c->makeSound();
+		d->makeSound();
+		meta->makeSound();
+		// d->Animal::makeSound();	// 정적 바인딩
 
-		delete animal;
-		delete cat;
-		delete dog;
+		delete meta;
+		delete c;
+		delete d;
 	}
 
 	std::cout << std::endl;
