@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 15:08:21 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/03/02 00:55:06 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/06 18:27:39 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ std::ostream &operator<<( std::ostream &out, const Conversion &Ref ) {
 
 	if (isnan(Ref.getValue()) || isinf(Ref.getValue())) {
 		out << "float: " << std::showpos << Ref.toFloat() << "f" << std::endl;
-		out << "double: " << std::showpos << Ref.toFloat();
+		out << "double: " << std::showpos << Ref.toDouble();
 		return (out);
 	}
 
