@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 17:55:14 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/28 12:22:36 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/06 12:48:35 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,19 +73,19 @@ void Bureaucrat::signForm( const Form &Ref ) {
 	try {
 		(const_cast<Form*>(&Ref))->beSigned(*this);
 		std::cout
-		<< "[" << this->getName() << "]"
-		<< GREEN << " signs " << EOC
-		<< "[" << Ref.getName() << "]"
-		<< std::endl;
+			<< "[" << this->getName() << "]"
+			<< GREEN << " signs " << EOC
+			<< "[" << Ref.getName() << "]"
+			<< std::endl;
 	}
 	catch (const std::exception &e) {
 		std::cout
-		<< "[" << this->getName() << "]"
-		<< YELLOW << " cannot sign " << EOC
-		<< "[" << Ref.getName() << "]"
-		<< YELLOW << " because " << EOC
-		<< e.what()
-		<< std::endl;
+			<< "[" << this->getName() << "]"
+			<< YELLOW << " cannot sign " << EOC
+			<< "[" << Ref.getName() << "]"
+			<< YELLOW << " because " << EOC
+			<< e.what()
+			<< std::endl;
 	}
 }
 
@@ -95,8 +95,8 @@ void Bureaucrat::signForm( const Form &Ref ) {
 std::ostream &operator<<( std::ostream &out, const Bureaucrat &Ref ) {
 
 	out << "- "
-	<< CYAN << Ref.getName() << EOC
-	<< ", bureaucrat grade "
-	<< CYAN << Ref.getGrade() << EOC;
+		<< CYAN << Ref.getName() << EOC
+		<< ", bureaucrat grade "
+		<< CYAN << Ref.getGrade() << EOC;
 	return (out);
 }

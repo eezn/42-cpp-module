@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 22:28:09 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/02/28 12:18:20 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/06 12:48:40 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ int Form::getExecGrade( void ) const { return (this->exec_grade); }
 std::ostream &operator<<( std::ostream &out, const Form &Ref ) {
 	
 	out << "- " << CYAN << Ref.getName() << EOC << " info" << std::endl
-	<< " sign_grade: " << CYAN << Ref.getSignGrade() << EOC << std::endl
-	<< " exec_grade: " << CYAN << Ref.getExecGrade() << EOC << std::endl
-	<< " is signed?: " << CYAN << std::boolalpha << Ref.getIsSigned() << EOC;
+		<< " sign_grade: " << CYAN << Ref.getSignGrade() << EOC << std::endl
+		<< " exec_grade: " << CYAN << Ref.getExecGrade() << EOC << std::endl
+		<< " is signed?: " << CYAN << std::boolalpha << Ref.getIsSigned() << EOC;
 	return (out);
 }
