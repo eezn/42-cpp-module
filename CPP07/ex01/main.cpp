@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: jin-lee <jin-lee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 01:40:11 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/03/07 02:09:17 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/07 18:45:04 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,17 @@ int main ( void ) {
 		0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 	};
 
+	Dummy dummy[5];
+
+	dummy[0].setValue(1);
+	dummy[1].setValue(2);
+	dummy[2].setValue(3);
+	dummy[3].setValue(4);
+	dummy[4].setValue(5);
+
 	iter(cpp_module, 6, print);
 	iter(digit, 10, print);
+	iter(dummy, 5, print);
 
 	return (0);
 }
