@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 01:25:26 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/03/07 02:09:24 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/03/07 02:24:35 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main ( void ) {
 	int a = 2;
 	int b = 3;
 
-	::swap( a, b );
+	::swap( a, b );	// :: 전역 범위 지정
 	std::cout << "a = " << a << ", b = " << b << std::endl;
 	std::cout << "min(a, b) = " << ::min(a, b) << std::endl;
 	std::cout << "max(a, b) = " << ::max(a, b) << std::endl;
