@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:58:20 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/03/05 10:57:52 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/04/15 16:59:42 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,17 @@ int main( void ) {
 
 	for (int i = 0; i < 6; i++)
 		delete animal[i];
+
+	Animal *old_dog = new Dog();
+	Animal *new_dog = new Dog();
+	old_dog = new_dog;
 	
 	// for (;;) {}
+
+	system("leaks Animal_01");
+
+	// Brain *b_ptr;
+	// printf("%p\n", b_ptr);
 
 	return (0);
 }

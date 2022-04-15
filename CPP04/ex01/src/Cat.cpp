@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:25:14 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/03/05 10:58:47 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/04/15 16:52:46 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cat::Cat( void ) {
 	this->brain = new Brain();
 }
 
-Cat::Cat( const Cat &cRef ) {
+Cat::Cat( const Cat &cRef ) : brain(NULL) {
 
 	std::cout << CYAN << "Cat::" << EOC;
 	std::cout << "Copy constructor called" << std::endl;
@@ -43,6 +43,8 @@ Cat::~Cat( void ) {
 Cat &Cat::operator=( const Cat &cRef ) {
 
 	this->type = cRef.getType();
+	if (this->brain)
+		delete this->brain;
 	this->brain = new Brain(*(cRef.getBrain()));
 	return (*this);
 }

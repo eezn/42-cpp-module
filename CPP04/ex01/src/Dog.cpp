@@ -6,7 +6,7 @@
 /*   By: jin-lee <jin-lee@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:20:19 by jin-lee           #+#    #+#             */
-/*   Updated: 2022/03/05 10:59:04 by jin-lee          ###   ########.fr       */
+/*   Updated: 2022/04/15 17:01:31 by jin-lee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Dog::Dog( void ) {
 	this->brain = new Brain();
 }
 
-Dog::Dog( const Dog &dRef ) {
+Dog::Dog( const Dog &dRef ) : brain(NULL) {
 
 	std::cout << CYAN << "Dog::" << EOC;
 	std::cout << "Copy constructor called" << std::endl;
@@ -43,6 +43,8 @@ Dog::~Dog( void ) {
 Dog &Dog::operator=( const Dog &dRef ) {
 
 	this->type = dRef.getType();
+	if (this->brain)
+		delete this->brain;
 	this->brain = new Brain(*(dRef.getBrain()));
 	return (*this);
 }
